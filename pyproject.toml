@@ -1,0 +1,14 @@
+[project]
+name = "difference-cover-set"
+version = "0.1.0"
+description = "Set with insert, delete, and k-th smallest in range queries using block decomposition over the value universe"
+requires-python = ">=3.10"
+dependencies = []
+readme = "README.md"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
