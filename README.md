@@ -25,3 +25,10 @@ This library trades asymptotic optimality for implementation simplicity: it part
 Inserting a value larger than the initial `universe_size` triggers a rebuild: all elements are reorganized into a wider block structure. This is an O(n) amortized cost paid on growth. If you know your value range in advance, pass a generous `universe_size` to the constructor to avoid mid-run rebuilds.
 
 Negative values are rejected on insert. Queries clamp negative `l` to 0.
+
+## Design notes
+
+The window stores values eagerly rather than keeping running aggregates. Running
+sums drift with floating point over long streams, and recomputing from a small
+buffer is cheap enough that the drift is not worth the speed.
+
