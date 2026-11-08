@@ -1,6 +1,6 @@
 [project]
 name = "difference-cover-set"
-version = "0.1.0"
+version = "0.1.1"
 description = "Set with insert, delete, and k-th smallest in range queries using block decomposition over the value universe"
 requires-python = ">=3.10"
 dependencies = []
